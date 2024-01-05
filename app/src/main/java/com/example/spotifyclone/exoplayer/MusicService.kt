@@ -47,11 +47,13 @@ class MusicService: MediaBrowserServiceCompat() {
         super.onDestroy()
         serviceScope.cancel()
     }
+
     override fun onGetRoot(
         clientPackageName: String,
         clientUid: Int,
         rootHints: Bundle?
     ): BrowserRoot? {
+        TODO("Not yet implemented")
     }
 
     override fun onLoadChildren(
