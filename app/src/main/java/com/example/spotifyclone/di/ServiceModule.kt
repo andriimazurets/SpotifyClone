@@ -1,6 +1,7 @@
 package com.example.spotifyclone.di
 
 import android.content.Context
+import com.example.spotifyclone.data.entities.remote.MusicDatabase
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.audio.AudioAttributes
@@ -17,6 +18,10 @@ import dagger.hilt.android.scopes.ServiceScoped
 @Module
 @InstallIn(ServiceComponent::class)
 object ServiceModule {
+
+    @ServiceScoped
+    @Provides
+    fun provideMusicDatabase() = MusicDatabase()
 
     @ServiceScoped
     @Provides
